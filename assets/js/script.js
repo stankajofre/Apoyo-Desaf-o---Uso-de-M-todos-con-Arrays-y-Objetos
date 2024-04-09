@@ -47,22 +47,46 @@ radiologia.pop();
 
 //PREGUNTA 3
 dental.forEach((consulta) => {
-    console.log(consulta)
+
     document.write(`<p>${consulta.hora} - ${consulta.especialista} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision}</p>`)
 });
 
 //pregunta 4
 
-document.write('<h2>Listado Total de Pacientes Atendidos:</h2>');
+document.write('<h2 class=" center"> Lista de Pacientes</h2>');
 
 // Función para obtener los nombres de los pacientes de un arreglo de consultas médicas
-function total() {
-    const union = radiologia.concat(traumatologia).concat(dental);
-    console.log(union)
-    for (i = 0; i < union.length; i++) {
-        document.write('<h2>Listado Total de Pacientes Atendidos:</h2>');
-    }
 
+const union = radiologia.concat(traumatologia, dental);
+
+union.forEach((consulta) => {
+    document.write(`<p>${consulta.paciente}</p>`)
+});
+
+//preunta 5
+
+document.write('<h3 class=" center"> Requerimineto 5</h3>');
+
+// Filtrar pacientes de Dental con previsión ISAPRE
+let pacientesISAPRE = dental.filter((consulta) => {
+    return consulta.prevision === `ÌSAPRE`
+
+});
+
+consulta.pacientesDeIsapre.forEach((consultas) => {
+    document.write(`<p>${consulta.paciente} - ${consulta.prevision} </p>`)
+})
+
+
+console.log(pacientesDeIsapre)
+
+
+
+// Imprimir cada paciente en un párrafo separado
+for (let i = 0; i < pacientesISAPRE.length; i++) {
+    let paciente = pacientesISAPRE[i];
+    let infoPaciente = `${paciente.paciente} - ${paciente.rut} - ${paciente.prevision}`;
+    document.write(`<p>${infoPaciente}</p>`);
 }
 
 
