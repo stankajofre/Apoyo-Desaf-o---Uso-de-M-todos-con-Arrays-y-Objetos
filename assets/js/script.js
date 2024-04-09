@@ -89,7 +89,19 @@ for (let i = 0; i < pacientesISAPRE.length; i++) {
     document.write(`<p>${infoPaciente}</p>`);
 }
 
+//preunta 6
 
+document.write('<h2>Listado de Pacientes de Traumatología con Previsión FONASA:</h2>');
+
+// Filtrar pacientes de Dental con previsión ISAPRE
+let pacientesFonasa = traumatologia.filter((consulta) => {
+    return consulta.prevision === `Fonasa`
+
+});
+
+consulta.pacientesDeFonasa.forEach((consultas) => {
+    document.write(`<p>${consulta.paciente} - ${consulta.prevision} </p>`)
+})
 
 
 
