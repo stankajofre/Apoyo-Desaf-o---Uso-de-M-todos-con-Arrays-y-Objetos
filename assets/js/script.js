@@ -39,6 +39,11 @@ function agregar() {
     );
 }
 
+// Eliminar el primer elemento
+radiologia.shift();
+
+// Eliminar el último elemento
+radiologia.pop();
 
 
 
