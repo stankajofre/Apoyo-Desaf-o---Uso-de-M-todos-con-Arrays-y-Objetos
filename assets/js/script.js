@@ -45,7 +45,11 @@ radiologia.shift();
 // Eliminar el último elemento
 radiologia.pop();
 
-
+//PREGUNTA 3
+dental.forEach((consulta) => {
+    console.log(consulta)
+    document.write(`<p>${consulta.hora} - ${consulta.especialista} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision}</p>`)
+});
 
 
 
