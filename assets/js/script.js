@@ -51,6 +51,22 @@ dental.forEach((consulta) => {
     document.write(`<p>${consulta.hora} - ${consulta.especialista} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision}</p>`)
 });
 
+//pregunta 4
+
+document.write('<h2>Listado Total de Pacientes Atendidos:</h2>');
+
+// Función para obtener los nombres de los pacientes de un arreglo de consultas médicas
+function total() {
+    const union = radiologia.concat(traumatologia).concat(dental);
+    console.log(union)
+    for (i = 0; i < union.length; i++) {
+        document.write('<h2>Listado Total de Pacientes Atendidos:</h2>');
+    }
+
+}
+
+
+
 
 
 
